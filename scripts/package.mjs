@@ -29,7 +29,6 @@ if (includeLocalData && fs.existsSync(sourceData)) {
   fs.writeFileSync(path.join(dataFolder, 'tasks.json'), JSON.stringify(state, null, 2), 'utf8');
   fs.writeFileSync(path.join(dataFolder, 'tasks.backup.json'), JSON.stringify(state, null, 2), 'utf8');
 }
-fs.copyFileSync(path.join(root, 'README.md'), path.join(appFolder, 'README.md'));
-fs.copyFileSync(path.join(root, 'docs', 'PORTABLE.md'), path.join(appFolder, '使用说明.md'));
+fs.copyFileSync(path.join(root, 'docs', 'PORTABLE.md'), path.join(appFolder, 'README.md'));
 console.log(`Windows app: ${path.join(appFolder, 'Daynote.exe')}`);
 console.log(includeLocalData ? 'Local tasks copied into this build. Keep it for personal use.' : 'Clean build: no local task data included.');
